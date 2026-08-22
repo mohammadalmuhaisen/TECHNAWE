@@ -454,7 +454,7 @@ lab_details_label.pack(pady=20)
 lab_image_label = tk.Label(labs_frame)
 lab_image_label.pack(pady=10)
 
-video_button = tk.Button(labs_frame, text="Click here to see the way", command=open_lab_video, state="disabled")
+video_button = tk.Button(labs_frame, text="How to Get There (Video)", command=open_lab_video, state="disabled")
 video_button.pack(pady=5)
 
 
