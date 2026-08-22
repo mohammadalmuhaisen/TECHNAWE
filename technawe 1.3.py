@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import messagebox
 import base64
 import io
+import webbrowser
 from PIL import Image, ImageTk
 
 
@@ -60,151 +61,176 @@ labs_info = {
         "building": "Classroom Complex",
         "floor": "Ground Floor",
         "direction": "Middle",
-        "image": "NB66 NB63 2.png"
+        "image": "NB66 NB63 2.png",
+        "video": "https://youtu.be/y2t5aCGq2Kw"
     },
     "NB63": {
         "building": "Classroom Complex",
         "floor": "Ground Floor",
         "direction": "Middle",
-        "image": "NB66 NB63 2.png"
+        "image": "NB66 NB63 2.png",
+        "video": "https://youtu.be/y2t5aCGq2Kw"
     },
     "SA1": {
         "building": "Dean's Office for Student Affairs",
         "floor": "Ground Floor",
         "direction": "Middle",
-        "image": "SA1.png"
+        "image": "SA1.png",
+        "video": "https://youtu.be/IMxeXozxAhU"
     },
     "CIS01": {
         "building": "PH3",
         "floor": "L1",
         "direction": "Medical buildings",
-        "image": "PH3 2.png"
+        "image": "PH3 2.png",
+        "video": "https://youtu.be/nZlw0tkDmq8"
     },
     "CIS02": {
         "building": "PH3",
         "floor": "L1",
         "direction": "Medical buildings",
-        "image": "PH3 2.png"
+        "image": "PH3 2.png",
+        "video": "https://youtu.be/nZlw0tkDmq8"
     },
     "CIS03": {
         "building": "PH1",
         "floor": "L1",
         "direction": "Medical buildings",
-        "image": "PH1 2.png"
+        "image": "PH1 2.png",
+        "video": "https://youtu.be/vtk5eI37AlA"
     },
     "CIS04": {
         "building": "G2",
         "floor": "L2",
         "direction": "Engineering buildings",
-        "image": "G2.png"
+        "image": "G2.png",
+        "video": "https://www.youtube.com/watch?v=hSV4Z2YyFm8"
     },
     "CIS05": {
         "building": "G2",
         "floor": "L2",
         "direction": "Engineering buildings",
-        "image": "G2.png"
+        "image": "G2.png",
+        "video": "https://www.youtube.com/watch?v=hSV4Z2YyFm8"
     },
     "CIS06": {
         "building": "N2",
         "floor": "L1",
         "direction": "Engineering buildings",
-        "image": "N2-ENG.png"
+        "image": "N2-ENG.png",
+        "video": "https://youtu.be/3TkYvrsWypY"
     },
     "CS01": {
         "building": "PH3",
         "floor": "L1",
         "direction": "Medical buildings",
-        "image": "PH3 2.png"
+        "image": "PH3 2.png",
+        "video": "https://youtu.be/nZlw0tkDmq8"
     },
     "CS02": {
         "building": "PH1",
         "floor": "L1",
         "direction": "Medical buildings",
-        "image": "PH1 2.png"
+        "image": "PH1 2.png",
+        "video": "https://youtu.be/vtk5eI37AlA"
     },
     "CS03": {
         "building": "PH1",
         "floor": "L1",
         "direction": "Medical buildings",
-        "image": "PH1 2.png"
+        "image": "PH1 2.png",
+        "video": "https://youtu.be/vtk5eI37AlA"
     },
     "CS06": {
         "building": "C5",
         "floor": "L1",
         "direction": "Engineering buildings",
-        "image": "C5.png"
+        "image": "C5.png",
+        "video": "https://youtu.be/YlrZYyz1hLM"
     },
     "SE01": {
         "building": "N1",
         "floor": "L0",
         "direction": "Engineering buildings",
-        "image": "N1-ENG.png"
+        "image": "N1-ENG.png",
+        "video": "https://youtu.be/3pDNhP7AuuA"
     },
     "SE02": {
         "building": "N1",
         "floor": "L0",
         "direction": "Engineering buildings",
-        "image": "N1-ENG.png"
+        "image": "N1-ENG.png",
+        "video": "https://youtu.be/3pDNhP7AuuA"
     },
     "SE03": {
         "building": "N1",
         "floor": "L0",
         "direction": "Engineering buildings",
-        "image": "N1-ENG.png"
+        "image": "N1-ENG.png",
+        "video": "https://youtu.be/3pDNhP7AuuA"
     },
     "SE04": {
         "building": "C1",
         "floor": "L2",
         "direction": "Engineering buildings",
-        "image": "C1.png"
+        "image": "C1.png",
+        "video": "https://youtu.be/YlrZYyz1hLM"
     },
     "CPE06": {
         "building": "M7",
         "floor": "L2",
         "direction": "Engineering buildings",
-        "image": "M7.png"
+        "image": "M7.png",
+        "video": "https://youtu.be/WxM-7fU2UkI"
     },
     "CPE09": {
         "building": "E4",
         "floor": "L2",
         "direction": "Engineering buildings",
-        "image": "E4.png"
+        "image": "E4.png",
+        "video": "https://youtu.be/fsVYhGzbHhE"
     },
     "CAD1": {
         "building": "M6",
         "floor": "L2",
         "direction": "Engineering buildings",
-        "image": "M6.png"
+        "image": "M6.png",
+        "video": "https://youtu.be/YttZpijam4I"
     },
     "CAD2": {
         "building": "M5",
         "floor": "L2",
         "direction": "Engineering buildings",
-        "image": "M5.png"
+        "image": "M5.png",
+        "video": "https://youtu.be/YttZpijam4I"
     },
     "GIS": {
         "building": "C5",
         "floor": "L2",
         "direction": "Engineering buildings",
-        "image": "C5.png"
+        "image": "C5.png",
+        "video": "https://youtu.be/YlrZYyz1hLM"
     },
     "NES02": {
         "building": "E1",
         "floor": "L3",
         "direction": "Engineering buildings",
-        "image": "E1.png"
+        "image": "E1.png",
+        "video": "https://youtu.be/HJCuFhI4SY4"
     },
     "N2": {
         "building": "N2",
         "floor": "L1",
         "direction": "Medical buildings",
-        "image": "N2-MED 2.png"
+        "image": "N2-MED 2.png",
+        "video": "https://youtu.be/72KrSUzJhQg"
     },
     "M4": {
         "building": "M4",
         "floor": "L3",
         "direction": "Medical buildings",
-        "image": "M4-MED.png"
+        "image": "M4-MED.png",
+        "video": "https://youtu.be/NioZ_YGupMA"
     }
 }
 
@@ -231,6 +257,15 @@ def toggle_gpa_fields():
         privious_gpa.config(state = "disabled")
         privious_hours.config(state = "disabled")
 
+def open_lab_video():
+    selected_lab = lab_combobox.get()
+    if selected_lab in labs_info:
+        video_url = labs_info[selected_lab].get("video", "")
+        if video_url:
+            webbrowser.open(video_url)
+        else:
+            messagebox.showinfo("No Video", "No video is available for this lab yet.", parent=labs_frame)
+
 def display_lab_info(event=None):
     selected_lab = lab_combobox.get()
 
@@ -256,6 +291,11 @@ def display_lab_info(event=None):
         except Exception as e:
             lab_image_label.config(image="")
             messagebox.showerror("Error", f"Could not open image:\n{e}", parent=labs_frame)
+
+        if info.get("video", ""):
+            video_button.config(state="normal")
+        else:
+            video_button.config(state="disabled")
 
 def subject_data():
     try:
@@ -413,6 +453,9 @@ lab_details_label.pack(pady=20)
 
 lab_image_label = tk.Label(labs_frame)
 lab_image_label.pack(pady=10)
+
+video_button = tk.Button(labs_frame, text="Click here to see the way", command=open_lab_video, state="disabled")
+video_button.pack(pady=5)
 
 
 message = tk.Label(main_frame,text = "Welcome ya TECHNAWE!", font=("Arial", 22, "bold"))
