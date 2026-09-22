@@ -430,11 +430,10 @@ buttonClear = tk.Button(gpa_frame, text="Clear Data", command=clear_data, fg="re
 buttonClear.place(x=525,y=275)
 
 messagesg = tk.Label(gpa_frame, text="", font=("Arial", 13, "bold"))
-messagesg.place(x=520, y=360) 
+messagesg.place(x=520, y=360)
 
 messagecg = tk.Label(gpa_frame, text="", font=("Arial", 13, "bold"))
 messagecg.place(x=520, y=400)
-
 
 
 
